@@ -159,7 +159,7 @@ Cloudticity uses paper records to store recovery keys for FileVault, BitLocker, 
       * Current exceptions: Google Apps and Trend Micro do not have these settings. Trend Micro Deep Security will have SAML support starting in version 10.1, at which time Cloudticity will federate TMDS to a consolidated source (Google/AWS/OneLogin)
    * account lockout after 5 invalid attempts.
 4. All system and application passwords must be stored and transmitted securely.
-   * Where possible, passwords should be stored in a hashed format using a salted cryptographic hash function (SHA-256 or equivalent).
+   * Where possible, passwords should be stored in a hashed format using a salted key derivation function (PBKDF2 or equivalent).
    * Passwords that must be stored in non-hashed format must be encrypted at rest pursuant to the requirements in [§17.8](17-data_integrity_policy.md#178-production-data-security).
    * Transmitted passwords must be encrypted in flight pursuant to the requirements in [§17.9](17-data_integrity_policy.md#179-transmission-security).
 5. Each information system automatically requires users to change passwords at a pre-determined interval as determined by the organization, based on the criticality and sensitivity of the information contained within the network, system, application, and/or database.
